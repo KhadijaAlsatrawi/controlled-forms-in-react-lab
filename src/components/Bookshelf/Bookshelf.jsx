@@ -57,7 +57,7 @@ function Bookshelf() {
             </div>
             <div className="bookCardsDiv">
                 {books.map(oneBook =>
-                    <div className='bookCard'>
+                    <div className='bookCard' key={oneBook.title}>
                         <h4>Title: {oneBook.title}</h4>
                         <small>Author: {oneBook.author}</small>
                     </div>
