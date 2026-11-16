@@ -1,7 +1,11 @@
 import { useState } from 'react';
 
 function Bookshelf() {
-    const [books, setBooks] = useState([])
+    const [books, setBooks] = useState([
+        { title: 'Fourth Wing', author: 'Rebecca Yarros' },
+        { title: 'The Lion, the Witch and the Wardrobe', author: 'C.S. Lewis' },
+    ]);
+
     const [newBook, setNewBook] = useState({ title: '', author: '' })
     const [errors, setErrors] = useState({ title: '', author: '' })
 
@@ -27,7 +31,7 @@ function Bookshelf() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        setBooks([...books, newBook ])
+        setBooks([...books, newBook])
         setNewBook({ title: '', author: '' })
     }
 
