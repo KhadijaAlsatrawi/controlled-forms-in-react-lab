@@ -27,7 +27,7 @@ function Bookshelf() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        setBooks([...books, { ...newBook }])
+        setBooks([...books, newBook ])
         setNewBook({ title: '', author: '' })
     }
 
